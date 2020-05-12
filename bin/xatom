@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir -p ${HOME}/.atom/
+mkdir -p ${HOME}/workspace/
+
+docker run --rm \
+	-v /etc/localtime:/etc/localtime:ro \
+	-v /etc/ssh/ssh_known_hosts:/etc/ssh/ssh_known_hosts:ro \
+	-v "${HOME}/.ssh/:/home/atom/.ssh/:ro" \
+	-v "${HOME}/.atom/:/home/atom/.atom/" \
+	-v "${HOME}/workspace/:/home/atom/project/" \
+	-p 322:22 \
+	--name atom \
+	nouchka/xatom
