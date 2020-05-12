@@ -7,4 +7,4 @@ mkdir /var/run/sshd
 
 ##export DISPLAY=:0
 
-tail -f /var/log/Xorg.0.log
+tail -f /var/log/*.log
