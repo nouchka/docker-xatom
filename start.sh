@@ -7,4 +7,7 @@ mkdir /var/run/sshd
 
 ##export DISPLAY=:0
 
+usermod -u $PUID atom
+groupmod -g $PGID atom
+
 tail -f /var/log/*.log

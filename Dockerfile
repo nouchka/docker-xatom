@@ -3,6 +3,8 @@ FROM jamesnetherton/docker-atom-editor
 USER root
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV PUID 1000
+ENV PGID 1000
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
