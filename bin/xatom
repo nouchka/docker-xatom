@@ -3,7 +3,7 @@
 mkdir -p ${HOME}/.atom/
 mkdir -p ${HOME}/workspace/
 
-docker run --rm \
+docker run --privileged --rm \
 	-v /etc/localtime:/etc/localtime:ro \
 	-v /etc/ssh/ssh_known_hosts:/etc/ssh/ssh_known_hosts:ro \
 	-v "${HOME}/.ssh/:/home/atom/.ssh/:ro" \
